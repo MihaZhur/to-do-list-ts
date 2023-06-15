@@ -1,0 +1,120 @@
+.popover {
+  position: absolute;
+  top: -140%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease 0.4s;
+  visibility: hidden;
+  pointer-events: none;
+}
+.btn {
+  position: relative;
+  &:hover {
+    .popover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.title {
+  color: white;
+}
+.settings {
+  margin-left: auto;
+}
+.gradient-custom {
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  min-height: 100vh;
+}
+.form-update {
+  display: none !important;
+}
+.list-group-item.update {
+  .text {
+    display: none;
+  }
+  .form-update {
+    display: flex !important;
+  }
+}
+
+.aler-message {
+  position: fixed;
+  max-width: 300px;
+  padding: 20px 20px 20px 70px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px 0 0 20px;
+  right: 0;
+  top: 50px;
+  width: 100%;
+  transform: translateX(110%);
+  transition: all 0.3s ease;
+  i {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .bi-x-circle {
+    display: block;
+    color: currentColor;
+    font-size: 20px;
+    position: static;
+    transform: translateY(0);
+    &::before {
+      background-color: #fff;
+      border-radius: 100%;
+    }
+  }
+}
+.aler-message.open {
+  transform: translateX(0);
+}
+.aler-message__close {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  display: flex;
+  align-items: center;
+  color: currentColor;
+}
+.aler-message.success {
+  border: 1px solid #00ff57;
+  color: #00ff57;
+  .bi-check-circle {
+    display: block;
+    // width: 30px;
+    // display: block;
+  }
+}
+.aler-message.error {
+  border: 1px solid #ff3737;
+  color: #ff3737;
+  .bi-dash-circle {
+    display: block;
+  }
+}
+
+#list-to-do.active {
+  .checked {
+    display: none !important;
+  }
+}
+#list-to-do.completed {
+  .no-checked {
+    display: none !important;
+  }
+}
+
+.nav-link {
+  
+}
